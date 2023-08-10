@@ -1,0 +1,19 @@
+---
+title: "Day 4 Comp Session 1"
+format: html
+editor: visual
+---
+
+## Making Vectors 
+
+```{r}
+
+#c is concatenate  give it a series of values
+rain <- c(3, 5, 10.1, 6)
+
+
+#scalar multiplication
+rain_scaled <- 5* rain
+
+
+```
