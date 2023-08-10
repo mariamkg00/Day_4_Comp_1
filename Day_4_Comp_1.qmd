@@ -52,3 +52,53 @@ my_matrix + matrixA
 ```
 
 ## Matrix multiplication
+
+```{r}
+#make two matrices, both 2 by 2
+cats <- matrix(data = c(0, 4, 3, 1),
+               nrow=2,
+               ncol =2,
+               byrow =TRUE)
+dogs <- matrix(data =c(-6, -3, 0, 2),
+               nrow=2,
+               ncol=2,
+               byrow= TRUE)
+
+```
+
+```{r}
+dogs %*% cats
+```
+
+## Leslie Matrix example
+
+making a matrix of coefficients, providing initial conditions
+
+```{r}
+insec_leslie <- matrix (data= c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0),
+                        nrow=3,
+                        ncol=3,
+                        byrow=TRUE)
+#giving intial condition 
+
+insect_y0 <- c(12000, 700, 500)
+#second matrix which will take the dot product with 
+
+```
+
+Find the population structure for each live stage at t=1 year:
+
+```{r}
+#find the dot product, multiply matrix of coefficient
+
+insect_y1 <- insec_leslie %*% insect_y0
+
+#600 eggs multiplied by initial adult female 300,000 eggs in the next cycle 
+
+```
+
+Find the population structure at t=2 years:
+
+```{r}
+insect_y2 <- insec_leslie %*% insect_y1
+```
